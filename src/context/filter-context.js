@@ -35,10 +35,10 @@ const FilterContextProvider = ({ children }) => {
   };
 
   const [filterState, filterDispatch] = useReducer(reducerFunction, {
-    price: "",
-    propertyType: "",
+    price: null,
+    propertyType: null,
     location: "",
-    date: "",
+    date: null,
   });
 
   return (

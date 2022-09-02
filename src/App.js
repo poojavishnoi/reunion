@@ -27,7 +27,6 @@ function App() {
 
             <TextField
               id="outlined-select-search"
-              select
               label="Search with search bar"
               size="small"
               style={{width: "25%", backgroundColor:"white"}}

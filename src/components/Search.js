@@ -64,6 +64,8 @@ function Search() {
     setLocation(event.target.value);
   };
 
+  console.log(price);
+
   const searchHandler = () => {
     var dateValue;
     if (date) {
@@ -71,6 +73,8 @@ function Search() {
     } else {
       dateValue = "";
     }
+
+    console.log(price)
 
     filterDispatch({ type: "PRICE", payload: price });
     filterDispatch({ type: "LOCATION", payload: location });
@@ -92,7 +96,7 @@ function Search() {
 
         <Toolbar>
           <TextField
-            style={{ width: "13rem" }}
+            
             id="standard-select-location"
             select
             label="location"
@@ -119,6 +123,7 @@ function Search() {
             <DatePicker
               label="Select move in date"
               value={date}
+              select
               onChange={(newValue) => {
                 setDate(newValue);
               }}
@@ -153,7 +158,7 @@ function Search() {
 
         <Toolbar>
           <TextField
-            style={{ width: "13rem" }}
+            // style={{ width: "13rem" }}
             id="standard-select-property"
             select
             label="Property"
