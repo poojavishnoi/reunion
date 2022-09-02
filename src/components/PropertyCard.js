@@ -6,7 +6,6 @@ import {
   Divider,
   IconButton,
   Typography,
-  Toolbar,
   CardMedia,
 } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
