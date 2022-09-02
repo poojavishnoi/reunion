@@ -64,7 +64,6 @@ function Search() {
     setLocation(event.target.value);
   };
 
-  console.log(price);
 
   const searchHandler = () => {
     var dateValue;
@@ -73,8 +72,6 @@ function Search() {
     } else {
       dateValue = "";
     }
-
-    console.log(price)
 
     filterDispatch({ type: "PRICE", payload: price });
     filterDispatch({ type: "LOCATION", payload: location });
@@ -101,6 +98,7 @@ function Search() {
             select
             label="location"
             value={location}
+            sx={{ m:1, width: '20ch' }}
             onChange={handleLocationChange}
             variant="standard"
           >
@@ -123,12 +121,14 @@ function Search() {
             <DatePicker
               label="Select move in date"
               value={date}
+              
               select
               onChange={(newValue) => {
                 setDate(newValue);
               }}
               renderInput={(params) => (
-                <TextField variant="standard" {...params} />
+                <TextField             sx={{ m:1, width: '20ch' }}
+  variant="standard" {...params} />
               )}
             />
           </LocalizationProvider>
@@ -138,10 +138,12 @@ function Search() {
         
         <Toolbar>
           <TextField
-            style={{ width: "13rem" }}
             id="standard-select-property"
             select
             label="Price"
+            sx={{ m:1, width: '20ch' }}
+
+            // style={{width:"13rem"}}
             value={price}
             onChange={handlePriceChange}
             variant="standard"
@@ -158,9 +160,10 @@ function Search() {
 
         <Toolbar>
           <TextField
-            // style={{ width: "13rem" }}
             id="standard-select-property"
             select
+            sx={{ m:1, width: '20ch' }}
+            // style={{width:"13rem"}}
             label="Property"
             value={propertyType}
             onChange={handlePropertyChange}

@@ -17,13 +17,13 @@ function PropertyListing() {
         />
       ) : (
         
-        <Grid
+        <Grid className="grid"
           container
           spacing={{ xs: 2, md: 3 }}
           columns={{ xs: 4, sm: 8, md: 12 }}
         >
           {finalPropertyList.map((item, index) => (
-            <Grid item xs={2} sm={4} md={4} key={index}>
+            <Grid item xs={1} sm={4} md={4} key={index}>
               <PropertyCard
                 image={item.img}
                 name={item.name}
